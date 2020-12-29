@@ -174,6 +174,39 @@ class LinkedList
 			}
 		}
 	}
+	
+	public void reverseList()
+	{
+		Node current=start;
+		Node previous=null;
+		Node NEW=null;
+		while(current!=null)
+		{
+			NEW=current.getNext();
+			current.setNext(previous);
+			previous=current;
+			current=NEW;
+		}
+		viewReverseList(previous);
+	}
+	
+	public void viewReverseList(Node previous)
+	{
+		Node t2;
+		if(isEmpty())
+		{
+			System.out.println("List is empty.");
+		}
+		else
+		{
+			t2 = previous;
+			for(int i=1;i<=size;i++)
+			{
+				System.out.println("  "+t2.getData());
+				t2 = t2.getNext();
+			}
+		}
+	}
 }
 
 public class Main
@@ -193,7 +226,8 @@ public class Main
 			System.out.println("5. Delete item from the list at last");
 			System.out.println("6. Delete item from the list at position");
 			System.out.println("7. View List");
-			System.out.println("8. EXIT");
+			System.out.println("8. Reverse your list");
+			System.out.println("9. EXIT");
 			System.out.println("Enter your choice : ");
 			int choice = s.nextInt();
 			int position,value;
@@ -231,6 +265,9 @@ public class Main
 					list.viewList();
 					break;
 				case 8:
+					list.reverseList();
+					break;
+				case 9:
 					flag=false;
 					break;
 				default:System.out.println("Invalid choice");
