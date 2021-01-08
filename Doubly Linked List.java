@@ -184,7 +184,6 @@ class DoublyLinkedList
 	public void deleteAtPos(int pos)
 	{
 		Node t = start;
-		Node t2 = start;
 		if(start==null)
 			System.out.println("List is empty.");
 		else if(pos>size||pos<1)
