@@ -104,7 +104,6 @@ class DoublyLinkedList
 			}
 			t.setNext(NewNodeAdded);
 			NewNodeAdded.setPrev(t);
-			System.out.println("Heya!");
 		}
 		size++;
 	}
@@ -114,18 +113,15 @@ class DoublyLinkedList
 		if(pos==1)
 		{
 			insertAtFirst(value);
-			System.out.println("Heya2!");
 		}
 			
 		else if(pos==size+1)
 		{
 			insertAtLast(value);
-			System.out.println("Heya3!");
 		}
 			
 		else if(pos>1&&pos<=size)
 		{
-			System.out.println("Heya4!");
 			Node NewNodeAdded = new Node();
 			NewNodeAdded.setData(value);
 			Node t = start;
