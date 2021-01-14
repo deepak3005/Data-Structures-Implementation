@@ -3,6 +3,7 @@ import java.util.*;
 class Stack
 {
 	int top;
+	int x;
 	static final int max=1000;
 	int a[] = new int[max];
 	
