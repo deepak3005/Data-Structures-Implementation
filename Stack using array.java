@@ -75,16 +75,6 @@ class Stack
 			}
 		}
 	}
-	
-	//int reverseStack()
-	{
-		
-	}
-	
-	void sortStack()
-	{
-		
-	}
 }
 
 public class Main 
@@ -102,9 +92,7 @@ public class Main
 			System.out.println("3. View Stack");
 			System.out.println("4. Find Item at Top");
 			System.out.println("5. Search any Item");
-			System.out.println("6. Reverse Stack");
-			System.out.println("7. Sort Stack");
-			System.out.println("8. EXIT");
+			System.out.println("6. EXIT");
 			System.out.println("Enter your choice : ");
 			
 			int choice = s.nextInt();
@@ -136,12 +124,6 @@ public class Main
 					break;
 				
 				case 6:
-					
-				
-				case 7:
-					
-				
-				case 8:
 					flag=false;
 					break;
 				
