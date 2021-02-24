@@ -207,6 +207,25 @@ class LinkedList
 			}
 		}
 	}
+	
+	public void nthNodeFromLast(int pos)
+	{
+		Node mainPtr, refPtr;
+		mainPtr = start;
+		refPtr = start;
+		int count = 0;
+		while(count<pos)
+		{
+			refPtr = refPtr.getNext();
+			count++;
+		}
+		while(refPtr!=null)
+		{
+			refPtr = refPtr.getNext();
+			mainPtr = mainPtr.getNext();
+		}
+		System.out.println("Data at "+pos+"th node from last = "+mainPtr.getData());
+	}
 }
 
 public class Main
@@ -227,7 +246,8 @@ public class Main
 			System.out.println("6. Delete item from the list at position");
 			System.out.println("7. View List");
 			System.out.println("8. Reverse your list");
-			System.out.println("9. EXIT");
+			System.out.println("9. Find nth node from last");
+			System.out.println("10. EXIT");
 			System.out.println("Enter your choice : ");
 			int choice = s.nextInt();
 			int position,value;
@@ -268,6 +288,11 @@ public class Main
 					list.reverseList();
 					break;
 				case 9:
+					System.out.println("Enter position : ");
+					position = s.nextInt();
+					list.nthNodeFromLast(position);
+					break;
+				case 10:
 					flag=false;
 					break;
 				default:System.out.println("Invalid choice");
