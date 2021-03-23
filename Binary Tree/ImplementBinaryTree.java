@@ -33,6 +33,6 @@ public class ImplementBinaryTree
 	
 	public static void main(String args[])
 	{
-		
+		// Will do traversal in the upcoming parts
 	}
 }
