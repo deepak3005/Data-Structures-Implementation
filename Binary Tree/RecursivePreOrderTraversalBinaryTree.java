@@ -1,4 +1,4 @@
-public class PreOrderTraversalBinaryTree
+public class RecursivePreOrderTraversalBinaryTree
 {
 	private TreeNode root;
 	
@@ -44,7 +44,7 @@ public class PreOrderTraversalBinaryTree
 	
 	public static void main(String args[])
 	{
-		PreOrderTraversalBinaryTree m = new PreOrderTraversalBinaryTree();
+		RecursivePreOrderTraversalBinaryTree m = new RecursivePreOrderTraversalBinaryTree();
 		System.out.println("PreOrder Traversal of Binary Tree :\n");
 		m.CreateBinaryTree();
 		m.preOrder(m.root);
