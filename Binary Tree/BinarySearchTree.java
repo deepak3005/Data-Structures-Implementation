@@ -123,6 +123,27 @@ public class BinarySearchTree
 		}
 	}
 	
+	public TreeNode search(int key)
+	{
+		return search(root,key);
+	}
+	
+	public TreeNode search(TreeNode root, int key)
+	{
+		if(root==null||root.data==key)
+		{
+			return root;
+		}
+		if(key<root.data)
+		{
+			return search(root.left,key);
+		}
+		else
+		{
+			return search(root.right,key);
+		}
+	}
+	
 	public static void main(String args[])
 	{
 		BinarySearchTree m = new BinarySearchTree();
@@ -136,7 +157,8 @@ public class BinarySearchTree
 			System.out.println("3. InOrder Traversal");
 			System.out.println("4. PostOrder Traversal");
 			System.out.println("5. LevelOrder Traversal");
-			System.out.println("6. EXIT");
+			System.out.println("6. Search Key");
+			System.out.println("7. EXIT");
 			System.out.println("Enter your choice : ");
 			int choice = sc.nextInt();
 			int position,value;
@@ -169,6 +191,19 @@ public class BinarySearchTree
 					System.out.println("\n");
 					break;
 				case 6:
+					System.out.print("Enter value : ");
+					value = sc.nextInt();
+					if(null!=m.search(value))
+					{
+						System.out.print("Key Found !!");
+					}
+					else
+					{
+						System.out.print("Key NOT Found !!");
+					}
+					System.out.println("\n");
+					break;
+				case 7:
 					flag=false;
 					break;
 				default:System.out.println("Invalid choice");
