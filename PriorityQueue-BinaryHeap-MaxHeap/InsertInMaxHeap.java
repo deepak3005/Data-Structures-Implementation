@@ -64,7 +64,6 @@ public class InsertInMaxHeap
 	public static void main(String args[])
 	{
 		InsertInMaxHeap m = new InsertInMaxHeap(3);
-		Scanner sc = new Scanner(System.in);
 		System.out.println(m.size());
 		System.out.println(m.isEmpty());
 		m.insert(4);
