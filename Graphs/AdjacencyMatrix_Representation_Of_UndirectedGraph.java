@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Adjacency_Matrix_Representation_Of_Undirected_Graph
+public class AdjacencyMatrix_Representation_Of_UndirectedGraph
 {
 	int V;
 	int E;
 	int[][] adjMatrix;
 	
-	public Adjacency_Matrix_Representation_Of_Undirected_Graph(int nodes)
+	public AdjacencyMatrix_Representation_Of_UndirectedGraph(int nodes)
 	{
 		V = nodes;
 		E = 0;
@@ -39,7 +39,7 @@ public class Adjacency_Matrix_Representation_Of_Undirected_Graph
 	
 	public static void main(String args[])
 	{
-		Adjacency_Matrix_Representation_Of_Undirected_Graph m = new Adjacency_Matrix_Representation_Of_Undirected_Graph(4);
+		AdjacencyMatrix_Representation_Of_UndirectedGraph m = new AdjacencyMatrix_Representation_Of_UndirectedGraph(4);
 		m.addEdge(0, 1);
 		m.addEdge(1, 2);
 		m.addEdge(2, 3);
