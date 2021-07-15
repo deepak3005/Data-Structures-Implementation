@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-class PrimeNumber
+class CheckPrimeNumber
 {
 	public static boolean CheckPrimeOrNot(int n)
 	{
