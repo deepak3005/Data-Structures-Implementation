@@ -1,0 +1,38 @@
+// Check if a given number is prime or not
+
+import java.util.*;
+
+class PrimeNumber
+{
+	public static boolean CheckPrimeOrNot(int n)
+	{
+		int m = n/2;
+		
+		for(int i=2;i<=m;i++)
+		{
+			if(n%i==0)
+			{
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number : ");
+		int n = sc.nextInt();
+		
+		if(CheckPrimeOrNot(n))
+		{
+			System.out.println("\nIt is a prime number.");
+		}
+		else
+		{
+			System.out.println("\nIt is NOT a prime number.");
+		}
+	}
+}
