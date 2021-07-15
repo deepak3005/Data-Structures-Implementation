@@ -6,7 +6,7 @@ class CheckPrimeNumber
 {
 	public static boolean CheckPrimeOrNot(int n)
 	{
-		int m = n/2;
+		int m = (int) Math.sqrt(n);
 		
 		for(int i=2;i<=m;i++)
 		{
