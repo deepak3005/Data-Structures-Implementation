@@ -27,7 +27,7 @@ class SubStrings
 		System.out.print("Enter string : ");
 		String s = sc.nextLine();
 		
-		String[] strArray = s.split(" ");
+		String[] strArray = s.split("");
 		
 		System.out.print("\nSubstrings are : \n");
 		printSubStrings(strArray);
